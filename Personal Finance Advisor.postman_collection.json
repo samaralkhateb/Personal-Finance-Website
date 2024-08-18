@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "f9161ed3-0e38-4f0a-8029-5396e4021528",
+		"name": "Personal Finance Advisor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2823068"
+	},
+	"item": [
+		{
+			"name": "Expenses",
+			"item": [
+				{
+					"name": "Add Expenses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzA1ZWNjYzVjN2U3ZGIyZDRkNDg2MiIsImlhdCI6MTcyMzk2OTMwMSwiZXhwIjoxNzIzOTcyOTAxfQ.GCSkDR6rQi-4oAgK4FbZ2Ht6b5nKOYilKChrAoIN5x0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 10000,\n    \"category\": \"Food\",\n    \"notes\": \"food for cat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5001/api/expenses/add"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Expenses Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzA1ZWNjYzVjN2U3ZGIyZDRkNDg2MiIsImlhdCI6MTcyMzk2OTMwMSwiZXhwIjoxNzIzOTcyOTAxfQ.GCSkDR6rQi-4oAgK4FbZ2Ht6b5nKOYilKChrAoIN5x0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5001/api/expenses"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Budget",
+			"item": [
+				{
+					"name": "Add Budget",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzA1ZWNjYzVjN2U3ZGIyZDRkNDg2MiIsImlhdCI6MTcyMzk2OTMwMSwiZXhwIjoxNzIzOTcyOTAxfQ.GCSkDR6rQi-4oAgK4FbZ2Ht6b5nKOYilKChrAoIN5x0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"income\": 10000,\n    \"category\": \"Transport\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5001/api/budgets/set"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Budgets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzA1ZWNjYzVjN2U3ZGIyZDRkNDg2MiIsImlhdCI6MTcyMzk2OTMwMSwiZXhwIjoxNzIzOTcyOTAxfQ.GCSkDR6rQi-4oAgK4FbZ2Ht6b5nKOYilKChrAoIN5x0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5001/api/budgets"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"samar.alkhateb@gmail.com\",\n    \"password\": \"123456789\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5001/api/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"samar.alkhateb@gmail.com\",\n    \"password\": \"123456789\",\n    \"username\": \"samar\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5001/api/users/register"
+			},
+			"response": []
+		}
+	]
+}
